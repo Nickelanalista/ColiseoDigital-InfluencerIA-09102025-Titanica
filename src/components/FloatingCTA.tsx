@@ -1,0 +1,30 @@
+import { useState, useEffect } from 'react';
+import { ArrowUp } from 'lucide-react';
+
+export default function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 800);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40 p-2.5 md:p-3 bg-white border border-gray-300 rounded-full text-gray-700 hover:border-primary hover:text-primary transition-all duration-300 shadow-lg ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+      }`}
+    >
+      <ArrowUp className="w-4 h-4 md:w-5 md:h-5" />
+    </button>
+  );
+}
