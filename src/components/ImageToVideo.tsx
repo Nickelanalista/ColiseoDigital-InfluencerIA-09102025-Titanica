@@ -109,36 +109,36 @@ export default function ImageToVideo() {
 
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-white max-w-3xl mx-auto">
                 <div className="grid grid-cols-2 gap-0">
-                  <div className="relative aspect-[4/5] bg-gray-100 border-r-2 border-gray-200">
-                    <div className="absolute top-3 md:top-4 left-1/2 -translate-x-1/2 z-10 bg-gray-900/90 backdrop-blur-sm text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold">
-                      Antes
+                  <div className="relative bg-gray-100 border-r-2 border-gray-200">
+                    <div className="px-3 pt-2 pb-1 text-center">
+                      <span className="text-xs md:text-sm font-semibold text-gray-900">Antes</span>
                     </div>
-
-                    <img
-                      src="/ugc/kate/modelo_anillo.png"
-                      alt="Kate - Imagen estática"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="aspect-[4/5]">
+                      <img
+                        src="/ugc/kate/modelo_anillo.png"
+                        alt="Kate - Imagen estática"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
 
-                  <div
-                    className="relative aspect-[4/5] bg-gradient-to-br from-orange-100 to-pink-100 overflow-hidden"
-                  >
-                    <div className="absolute top-3 md:top-4 left-1/2 -translate-x-1/2 z-10 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1.5 md:gap-2 shadow-lg">
-                      <Video className="w-3 h-3 md:w-4 md:h-4" />
-                      Después
+                  <div className="relative bg-gradient-to-br from-orange-100 to-pink-100">
+                    <div className="px-3 pt-2 pb-1 text-center">
+                      <span className="text-xs md:text-sm font-semibold text-gray-900 flex items-center justify-center gap-1.5">
+                        <Video className="w-3 h-3 md:w-4 md:h-4" />
+                        Después
+                      </span>
                     </div>
-
-                    <video
-                      src="/ugc/kate/video_modelo_anillo.mp4"
-                      className="w-full h-full object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="aspect-[4/5] overflow-hidden">
+                      <video
+                        src="/ugc/kate/video_modelo_anillo.mp4"
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

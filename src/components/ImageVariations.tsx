@@ -42,13 +42,13 @@ export default function ImageVariations() {
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-orange-500/10 rounded-full mb-4">
             <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-orange-600" />
-            <span className="text-xs md:text-sm font-semibold text-orange-600">PASO 2</span>
+            <span className="text-xs md:text-sm font-semibold text-orange-600">PASO 4</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 tracking-tight px-4">
-            Crear Variaciones desde Imagen
+            Crea Variaciones Infinitas
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-            Mantén la identidad de tu influencer mientras cambias outfit, contexto o agregas productos. Consistencia total en toda tu marca.
+            Mantén la identidad de tu influencer mientras cambias contexto, poses y escenarios. Genera contenido ilimitado para toda tu marca.
           </p>
         </div>
 

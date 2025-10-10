@@ -20,7 +20,7 @@ export default function FloatingCTA() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40 p-2.5 md:p-3 bg-white border border-gray-300 rounded-full text-gray-700 hover:border-primary hover:text-primary transition-all duration-300 shadow-lg ${
+      className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40 p-2.5 md:p-3 bg-gradient-to-r from-orange-500 to-pink-600 rounded-full text-white hover:from-orange-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
     >

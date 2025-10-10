@@ -45,7 +45,7 @@ export default function Footer() {
                 <li>
                   <a href="#" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
                     <span className="w-1 h-1 bg-primary rounded-full" />
-                    140+ páginas
+                    80+ páginas
                   </a>
                 </li>
                 <li>

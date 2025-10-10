@@ -69,13 +69,13 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="group px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-base"
               >
-                Comprar ahora · USD 14.99
+                Comprar ahora · USD 7.99
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600 pt-2">
-              {['140+ páginas', 'Videos incluidos', 'Pack de prompts', 'Uso comercial'].map((item, idx) => (
+              {['80+ páginas', 'Videos incluidos', 'Pack de prompts', 'Uso comercial'].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                   <span className="font-medium">{item}</span>
@@ -98,13 +98,17 @@ export default function Hero() {
 
               <div className="absolute -top-3 -right-3 bg-gradient-to-br from-orange-500 to-pink-600 text-white rounded-xl p-3 shadow-2xl min-w-[160px]">
                 <div className="flex justify-end mb-1">
-                  <div className="text-xs font-semibold bg-white/30 rounded-md px-2 py-0.5 backdrop-blur-sm line-through">
-                    Antes: USD 39
+                  <div className="text-xs font-semibold bg-white/30 rounded-md px-2 py-0.5 backdrop-blur-sm line-through flex items-baseline gap-1">
+                    <span>Antes: 39</span>
+                    <span className="text-[9px]">USD</span>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold leading-tight">USD 14.99</div>
-                  <div className="text-[10px] mt-0.5 font-medium opacity-90">Precio de hoy</div>
+                  <div className="text-3xl font-bold leading-tight flex items-baseline justify-center gap-1">
+                    <span>7.99</span>
+                    <span className="text-sm font-semibold">USD</span>
+                  </div>
+                  <div className="text-[10px] mt-0.5 font-medium opacity-90 hidden md:block">Precio de hoy</div>
                 </div>
               </div>
 

@@ -67,12 +67,11 @@ export default function UpscaleComparison() {
           >
             <div className="absolute inset-0">
               <img
-                src="/ugc/kate/modelo_joga_low.jpg"
-                alt="Kate - Antes del Upscale"
+                src="/ugc/kate/kate_yoga_upscale.png"
+                alt="Kate - Después del Upscale"
                 className="w-full h-full object-cover"
                 draggable="false"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 to-transparent" />
             </div>
 
             <div
@@ -80,11 +79,12 @@ export default function UpscaleComparison() {
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <img
-                src="/ugc/kate/kate_gap_uscale.png"
-                alt="Kate - Después del Upscale"
+                src="/ugc/kate/kate_yoga_low.jpg"
+                alt="Kate - Antes del Upscale"
                 className="w-full h-full object-cover"
                 draggable="false"
               />
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 to-transparent" />
             </div>
 
             <div

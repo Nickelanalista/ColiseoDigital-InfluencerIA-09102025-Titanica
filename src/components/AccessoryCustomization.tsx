@@ -12,18 +12,18 @@ export default function AccessoryCustomization() {
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-full mb-4">
             <Glasses className="w-4 h-4 text-purple-600" />
-            <span className="text-sm font-semibold text-purple-600">PERSONALIZACIÓN DE ACCESORIOS</span>
+            <span className="text-sm font-semibold text-purple-600">PASO 3 - ACCESORIOS</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight px-4">
-            Viste a tu influencer como quieras
+            Agrega Accesorios a tu Influencer
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-            Agrega gafas, joyas, sombreros o cualquier accesorio con un simple paso. Cambia el look completo manteniendo la identidad perfecta.
+            Gafas, joyas, sombreros o cualquier accesorio con un simple paso. Cambia el look completo manteniendo la identidad perfecta de tu influencer.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-7 gap-6 md:gap-8 items-center mb-12 md:mb-16">
-          <div className="lg:col-span-2 relative group">
+        <div className="grid md:grid-cols-3 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 md:gap-4 items-center mb-12 md:mb-16 max-w-6xl mx-auto">
+          <div className="relative group">
             <div className="absolute -inset-3 bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl blur-xl opacity-50" />
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-300">
               <div className="absolute top-4 left-4 z-10">
@@ -41,7 +41,7 @@ export default function AccessoryCustomization() {
             </div>
           </div>
 
-          <div className="lg:col-span-1 flex items-center justify-center">
+          <div className="flex items-center justify-center md:px-2">
             <div className="flex flex-col items-center gap-4">
               <div className="hidden lg:block">
                 <Plus className="w-10 h-10 text-purple-500" strokeWidth={3} />
@@ -52,7 +52,7 @@ export default function AccessoryCustomization() {
             </div>
           </div>
 
-          <div className="lg:col-span-2 relative group">
+          <div className="relative group">
             <div className="absolute -inset-3 bg-gradient-to-br from-purple-300 to-pink-300 rounded-3xl blur-xl opacity-50" />
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-purple-300">
               <div className="absolute top-4 left-4 z-10">
@@ -61,10 +61,10 @@ export default function AccessoryCustomization() {
                   Accesorio
                 </div>
               </div>
-              <div className="aspect-[3/4] bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-8">
-                <div className="bg-white rounded-xl shadow-lg p-6 max-w-[200px]">
+              <div className="aspect-[3/4] bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-4">
+                <div className="bg-white rounded-xl shadow-lg p-6 max-w-[200px] w-full">
                   <img
-                    src="/ugc/kate/gafas_rayban.webp"
+                    src="/ugc/kate/gafas_rayban_2.webp"
                     alt="Gafas Ray-Ban"
                     className="w-full h-auto"
                   />
@@ -73,7 +73,7 @@ export default function AccessoryCustomization() {
             </div>
           </div>
 
-          <div className="lg:col-span-1 flex items-center justify-center">
+          <div className="flex items-center justify-center md:px-2">
             <div className="flex flex-col items-center gap-4">
               <div className="hidden lg:block">
                 <ArrowRight className="w-10 h-10 text-green-500" strokeWidth={3} />
@@ -87,7 +87,7 @@ export default function AccessoryCustomization() {
             </div>
           </div>
 
-          <div className="lg:col-span-1 relative group">
+          <div className="relative group">
             <div className="absolute -inset-3 bg-gradient-to-br from-green-300 to-emerald-300 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
             <div
               className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-green-400 cursor-pointer transform hover:scale-105 transition-all duration-300"

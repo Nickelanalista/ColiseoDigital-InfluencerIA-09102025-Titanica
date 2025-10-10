@@ -33,8 +33,21 @@ export default function EbookContent() {
             Qué incluye el eBook
           </h2>
           <p className="text-base md:text-lg text-gray-600 px-4">
-            140+ páginas prácticas, sin relleno
+            80+ páginas prácticas, sin relleno
           </p>
+        </div>
+
+        <div className="mb-10 md:mb-16">
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity" />
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/20">
+              <img
+                src="/promo/mockup_ebook_influencer_5.png"
+                alt="Mockup del eBook - Influencer IA"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">

@@ -1,11 +1,10 @@
 import { Play, Plus, ArrowRight, Coffee, Package, CheckCircle, Sparkles } from 'lucide-react';
-import { useState, useRef } from 'react';
 
 const videoExamples = [
-  { video: '/ugc/james/james_stanley_1.mp4', title: 'Presentación natural' },
-  { video: '/ugc/james/james_stanley_2.mp4', title: 'Enfoque en producto' },
+  { video: '/ugc/james/james_stanley_5.mp4', title: 'Presentación natural' },
+  { video: '/ugc/james/james_stanley_4.mp4', title: 'Enfoque en producto' },
   { video: '/ugc/james/james_stanley_3.mp4', title: 'Contexto lifestyle' },
-  { video: '/ugc/james/james_stanley_4.mp4', title: 'Demostración de uso' },
+  { video: '/ugc/james/james_stanley_1.mp4', title: 'Demostración de uso' },
 ];
 
 const transformationSteps = [
@@ -26,29 +25,6 @@ const otherProducts = [
 ];
 
 export default function ProductIntegration() {
-  const [activeVideo, setActiveVideo] = useState<number | null>(null);
-  const [isPlaying, setIsPlaying] = useState<{ [key: number]: boolean }>({});
-  const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
-
-  const handleVideoClick = (index: number) => {
-    const video = videoRefs.current[index];
-    if (!video) return;
-
-    if (isPlaying[index]) {
-      video.pause();
-      setIsPlaying({ ...isPlaying, [index]: false });
-    } else {
-      Object.keys(videoRefs.current).forEach((key) => {
-        const num = parseInt(key);
-        if (videoRefs.current[num] && num !== index) {
-          videoRefs.current[num]?.pause();
-        }
-      });
-      video.play();
-      setIsPlaying({ ...isPlaying, [index]: true });
-      setActiveVideo(index);
-    }
-  };
 
   return (
     <section className="py-12 md:py-20 lg:py-24 px-4 bg-gradient-to-b from-white to-orange-50/30 relative overflow-hidden">
@@ -78,10 +54,10 @@ export default function ProductIntegration() {
             Proceso de transformación
           </h3>
 
-          <div className="grid md:grid-cols-7 gap-6 md:gap-4 items-center mb-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 md:gap-4 items-center mb-8 max-w-6xl mx-auto">
             {transformationSteps.map((step, index) => (
               <>
-                <div key={step.label} className="md:col-span-2 relative group">
+                <div key={step.label} className="relative group">
                   <div className={`absolute -inset-3 rounded-3xl blur-xl opacity-50 transition-opacity ${
                     index === 0 ? 'bg-gradient-to-br from-blue-200 to-blue-300' :
                     index === 1 ? 'bg-gradient-to-br from-orange-300 to-red-300' :
@@ -105,7 +81,7 @@ export default function ProductIntegration() {
                       <img
                         src={step.img}
                         alt={step.desc}
-                        className={`w-full h-full object-cover ${index === 1 ? 'w-auto h-auto max-h-[80%]' : ''}`}
+                        className={`w-full h-full object-cover ${index === 1 ? 'w-auto h-auto max-h-[70%]' : ''}`}
                       />
                     </div>
                     <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg p-2">
@@ -115,16 +91,16 @@ export default function ProductIntegration() {
                 </div>
 
                 {index < transformationSteps.length - 1 && (
-                  <div key={`arrow-${index}`} className="md:col-span-1 flex items-center justify-center">
+                  <div key={`arrow-${index}`} className="flex items-center justify-center md:px-2">
                     <div className="flex flex-col items-center gap-2">
-                      <div className="hidden md:block">
+                      <div className="hidden lg:block">
                         {index === 0 ? (
                           <Plus className="w-8 h-8 text-orange-500" strokeWidth={3} />
                         ) : (
                           <ArrowRight className="w-8 h-8 text-green-500" strokeWidth={3} />
                         )}
                       </div>
-                      <div className="md:hidden">
+                      <div className="lg:hidden">
                         {index === 0 ? (
                           <Plus className="w-6 h-6 text-orange-500 rotate-90" strokeWidth={3} />
                         ) : (
@@ -182,43 +158,24 @@ export default function ProductIntegration() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {videoExamples.map((example, index) => (
               <div key={index} className="relative group">
                 <div className="absolute -inset-2 bg-gradient-to-br from-blue-300 to-cyan-300 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity" />
 
                 <div className="relative bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all">
-                  <div
-                    className="aspect-[9/16] relative cursor-pointer"
-                    onClick={() => handleVideoClick(index)}
-                  >
+                  <div className="px-2 pt-2 pb-1 bg-blue-50 text-center">
+                    <p className="text-xs md:text-sm font-bold text-gray-900">{example.title}</p>
+                  </div>
+                  <div className="aspect-[9/16] relative overflow-hidden">
                     <video
-                      ref={(el) => (videoRefs.current[index] = el)}
                       src={example.video}
                       className="w-full h-full object-cover"
+                      autoPlay
                       loop
+                      muted
                       playsInline
-                      preload="metadata"
                     />
-
-                    {!isPlaying[index] && (
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                        <div className="bg-white/95 backdrop-blur-sm p-4 rounded-full shadow-xl group-hover:scale-110 transition-transform">
-                          <Play className="w-8 h-8 text-primary" fill="currentColor" />
-                        </div>
-                      </div>
-                    )}
-
-                    {activeVideo === index && isPlaying[index] && (
-                      <div className="absolute top-3 right-3 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1 animate-pulse">
-                        <div className="w-2 h-2 bg-white rounded-full" />
-                        EN VIVO
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="p-3 bg-gradient-to-br from-blue-50 to-cyan-50">
-                    <p className="text-sm font-bold text-gray-900 text-center">{example.title}</p>
                   </div>
                 </div>
               </div>
@@ -228,7 +185,7 @@ export default function ProductIntegration() {
           <div className="mt-8 text-center bg-blue-50 border border-blue-200 rounded-xl p-6">
             <div className="flex items-center justify-center gap-2 mb-2">
               <Sparkles className="w-5 h-5 text-blue-600" />
-              <p className="text-sm font-semibold text-blue-900">Toca cualquier video para reproducir</p>
+              <p className="text-sm font-semibold text-blue-900">Videos generados automáticamente</p>
             </div>
             <p className="text-sm text-gray-700">
               Genera variaciones infinitas con diferentes ángulos, contextos y estilos de presentación

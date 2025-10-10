@@ -134,7 +134,7 @@ export default function UseCases() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span>140+ páginas de contenido</span>
+              <span>80+ páginas de contenido</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/30" />
             <div className="flex items-center gap-2 text-sm">
