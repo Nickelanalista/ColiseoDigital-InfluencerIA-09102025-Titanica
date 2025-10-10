@@ -59,12 +59,12 @@ export default function ProductIntegration() {
             {transformationSteps.map((step, index) => (
               <React.Fragment key={step.label}>
                 <div className="relative">
-                  <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-orange-400">
+                  <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-gray-200">
                     <div className="bg-orange-500 text-white text-center font-bold text-sm md:text-base py-2">
                       {step.label}
                     </div>
                     <div className="p-2 bg-white">
-                      <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-orange-400 flex items-center justify-center bg-gray-50">
+                      <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-gray-300 flex items-center justify-center bg-gray-50">
                         <img
                           src={step.img}
                           alt={step.desc}

@@ -14,13 +14,12 @@ import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
-import StickyHeader from './components/StickyHeader';
 import FloatingCTA from './components/FloatingCTA';
 
 function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      <StickyHeader />
+      {/* Header oculto temporalmente */}
       <FloatingCTA />
 
       <Hero />
