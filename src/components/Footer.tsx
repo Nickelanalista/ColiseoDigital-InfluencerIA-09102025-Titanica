@@ -1,4 +1,4 @@
-import { Mail, Heart, Sparkles } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -11,8 +11,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-8 md:gap-12 mb-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl md:text-3xl font-bold">ColiseoDigital</h3>
+              <img
+                src="/material/logo_coliseo.png"
+                alt="ColiseoDigital"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               La guía definitiva para crear influencers IA consistentes y profesionales.
@@ -31,44 +34,11 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <span>Hecho con</span>
-              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-              <span>en Chile</span>
-            </div>
+            {/* Removed: "Hecho con ❤ en Chile" */}
           </div>
 
-          <div className="md:col-span-7 grid sm:grid-cols-3 gap-8">
-            <div>
-              <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Contenido</h4>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
-                    <span className="w-1 h-1 bg-primary rounded-full" />
-                    80+ páginas
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
-                    <span className="w-1 h-1 bg-primary rounded-full" />
-                    Pack de prompts
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
-                    <span className="w-1 h-1 bg-primary rounded-full" />
-                    Videos tutoriales
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2">
-                    <span className="w-1 h-1 bg-primary rounded-full" />
-                    Uso comercial
-                  </a>
-                </li>
-              </ul>
-            </div>
-
+          <div className="md:col-span-7 grid sm:grid-cols-2 gap-8">
+            
             <div>
               <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Legal</h4>
               <ul className="space-y-3 text-sm">
@@ -93,13 +63,13 @@ export default function Footer() {
             <div>
               <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Contacto</h4>
               <a
-                href="mailto:hola@coliseodigital.cl"
+                href="mailto:coliseodigitalcl@gmail.com"
                 className="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors text-sm group"
               >
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-primary/10 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span>hola@coliseodigital.cl</span>
+                <span>coliseodigitalcl@gmail.com</span>
               </a>
             </div>
           </div>

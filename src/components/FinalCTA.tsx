@@ -25,10 +25,8 @@ export default function FinalCTA() {
             </p>
 
             <a
-              href="https://pay.hotmart.com/F102324144R"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group px-6 md:px-10 py-3 md:py-4 bg-primary text-white font-semibold rounded-lg hover:shadow-xl transition-all inline-flex items-center gap-2 text-sm md:text-base hover:bg-primary-dark"
+              href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
+              className="hotmart-fb hotmart__button-checkout group px-6 md:px-10 py-3 md:py-4 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-lg hover:from-orange-600 hover:to-pink-700 hover:shadow-xl transition-all inline-flex items-center gap-2 text-sm md:text-base"
             >
               Comprar por USD 7.99
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
@@ -52,10 +50,8 @@ export default function FinalCTA() {
             </p>
 
             <a
-              href="https://pay.hotmart.com/F102324144R"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group px-6 md:px-10 py-3 md:py-4 bg-white text-primary font-semibold rounded-lg hover:shadow-xl transition-all inline-flex items-center gap-2 text-sm md:text-base"
+              href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
+              className="hotmart-fb hotmart__button-checkout group px-6 md:px-10 py-3 md:py-4 bg-white text-primary font-bold rounded-lg hover:shadow-xl transition-all inline-flex items-center gap-2 text-sm md:text-base"
             >
               Acceder ahora
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-0.5 transition-transform" />

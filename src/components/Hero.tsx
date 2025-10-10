@@ -64,10 +64,8 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
-                href="https://pay.hotmart.com/F102324144R"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-base"
+                href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
+                className="hotmart-fb hotmart__button-checkout group px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-base"
               >
                 Comprar ahora · USD 7.99
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -75,7 +73,7 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600 pt-2">
-              {['80+ páginas', 'Videos incluidos', 'Pack de prompts', 'Uso comercial'].map((item, idx) => (
+              {['80+ páginas', 'Pack de prompts', 'Uso comercial', 'Actualizaciones'].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                   <span className="font-medium">{item}</span>

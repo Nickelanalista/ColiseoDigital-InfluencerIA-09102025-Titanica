@@ -57,38 +57,33 @@ export default function Showcase() {
           {showcaseItems.map((item, index) => (
             <div
               key={index}
-              className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.05] border-2 border-gray-200 hover:border-primary/50"
+              className="group relative aspect-[3/4] rounded-xl overflow-hidden transition-all duration-500 border border-orange-200/40 hover:border-orange-400/60 shadow-lg hover:shadow-2xl hover:shadow-orange-500/20"
             >
-              <div className="absolute -inset-1 bg-gradient-to-br from-primary/30 to-purple-500/30 rounded-2xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
+              {/* Glow effect futurista al hover */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-orange-400/0 via-pink-500/0 to-orange-600/0 group-hover:from-orange-400/30 group-hover:via-pink-500/20 group-hover:to-orange-600/30 rounded-xl blur-lg transition-all duration-500 opacity-0 group-hover:opacity-100" />
 
               <div className="relative w-full h-full">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
 
-                <div className="absolute top-3 right-3">
-                  <span className="px-3 py-1.5 bg-gradient-to-r from-primary to-blue-600 text-white backdrop-blur-sm rounded-full text-xs font-bold shadow-lg">
+                {/* Overlay con gradiente naranja sutil - desaparece al hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-orange-950/60 via-black/20 to-transparent group-hover:opacity-0 transition-opacity duration-500" />
+
+                {/* Categoría con tema naranja */}
+                <div className="absolute top-3 right-3 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                  <span className="px-2.5 py-1 bg-gradient-to-r from-orange-500/90 to-pink-600/90 backdrop-blur-sm text-white rounded-lg text-[10px] font-semibold shadow-lg">
                     {item.category}
                   </span>
                 </div>
 
-                <div className="absolute top-3 left-3">
-                  <div className="bg-green-500 text-white px-2.5 py-1 rounded-full text-[10px] font-bold flex items-center gap-1.5 shadow-lg">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-                    100% IA
-                  </div>
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
-                  <div className="bg-white/95 backdrop-blur-lg rounded-xl p-3 md:p-4 border border-white/50 shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-gray-900 font-extrabold text-base md:text-lg mb-1">{item.name}</p>
-                    <p className="text-gray-700 text-xs md:text-sm font-medium">{item.description}</p>
-                    <div className="mt-2 pt-2 border-t border-gray-200">
-                      <p className="text-[10px] md:text-xs text-primary font-semibold">Creado con el eBook</p>
-                    </div>
+                {/* Información con glassmorphism - más pequeña y sutil */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                  <div className="bg-white/80 backdrop-blur-md rounded-lg p-2.5 border border-white/60 shadow-lg">
+                    <p className="text-gray-900 font-bold text-xs md:text-sm">{item.name}</p>
+                    <p className="text-gray-600 text-[10px] md:text-xs">{item.description}</p>
                   </div>
                 </div>
               </div>

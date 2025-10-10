@@ -81,10 +81,8 @@ export default function Pricing() {
           </div>
 
           <a
-            href="https://pay.hotmart.com/F102324144R"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group w-full px-6 md:px-8 py-3 md:py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-sm md:text-base"
+            href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
+            className="hotmart-fb hotmart__button-checkout group w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-sm md:text-base"
           >
             Comprar ahora · USD 7.99
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />

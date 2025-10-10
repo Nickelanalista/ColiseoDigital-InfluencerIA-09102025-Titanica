@@ -43,7 +43,7 @@ export default function UpscaleComparison() {
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-sm rounded-full mb-4">
             <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-orange-400" />
-            <span className="text-xs md:text-sm font-semibold text-orange-400">PASO 3</span>
+            <span className="text-xs md:text-sm font-semibold text-orange-400">PASO 4 - UPSCALE</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 tracking-tight px-4">
             Upscale Profesional

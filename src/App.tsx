@@ -5,11 +5,9 @@ import AccessoryCustomization from './components/AccessoryCustomization';
 import ProductIntegration from './components/ProductIntegration';
 import ValueProposition from './components/ValueProposition';
 import PromptToImage from './components/PromptToImage';
-import ImageVariations from './components/ImageVariations';
 import UpscaleComparison from './components/UpscaleComparison';
-import ImageToVideo from './components/ImageToVideo';
+import ImageAnimation from './components/ImageAnimation';
 import EbookContent from './components/EbookContent';
-import WhatYouGet from './components/WhatYouGet';
 import UseCases from './components/UseCases';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
@@ -27,16 +25,14 @@ function App() {
 
       <Hero />
       <Showcase />
+      <EbookContent />
       <PromptToImage />
       <OutfitCustomization />
       <AccessoryCustomization />
+      <UpscaleComparison />
+      <ImageAnimation />
       <ProductIntegration />
       <ValueProposition />
-      <ImageVariations />
-      <UpscaleComparison />
-      <ImageToVideo />
-      <EbookContent />
-      <WhatYouGet />
       <UseCases />
       <Testimonials />
       <Pricing />

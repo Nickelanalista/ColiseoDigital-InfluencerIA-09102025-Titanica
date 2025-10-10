@@ -1,3 +1,4 @@
+import React from 'react';
 import { Play, Plus, ArrowRight, Coffee, Package, CheckCircle, Sparkles } from 'lucide-react';
 
 const videoExamples = [
@@ -56,35 +57,22 @@ export default function ProductIntegration() {
 
           <div className="grid md:grid-cols-3 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 md:gap-4 items-center mb-8 max-w-6xl mx-auto">
             {transformationSteps.map((step, index) => (
-              <>
-                <div key={step.label} className="relative group">
-                  <div className={`absolute -inset-3 rounded-3xl blur-xl opacity-50 transition-opacity ${
-                    index === 0 ? 'bg-gradient-to-br from-blue-200 to-blue-300' :
-                    index === 1 ? 'bg-gradient-to-br from-orange-300 to-red-300' :
-                    'bg-gradient-to-br from-green-300 to-emerald-300 group-hover:opacity-75'
-                  }`} />
-                  <div className={`relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 ${
-                    index === 0 ? 'border-blue-300' :
-                    index === 1 ? 'border-orange-300' :
-                    'border-green-400'
-                  }`}>
-                    <div className="absolute top-3 left-3 z-10">
-                      <div className={`backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold ${
-                        index === 0 ? 'bg-blue-600' :
-                        index === 1 ? 'bg-orange-600' :
-                        'bg-green-600'
-                      }`}>
-                        {step.label}
+              <React.Fragment key={step.label}>
+                <div className="relative">
+                  <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-orange-400">
+                    <div className="bg-orange-500 text-white text-center font-bold text-sm md:text-base py-2">
+                      {step.label}
+                    </div>
+                    <div className="p-2 bg-white">
+                      <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-orange-400 flex items-center justify-center bg-gray-50">
+                        <img
+                          src={step.img}
+                          alt={step.desc}
+                          className={`${index === 1 ? 'w-auto h-auto max-h-[75%] object-contain' : 'w-full h-full object-cover'}`}
+                        />
                       </div>
                     </div>
-                    <div className={`aspect-[3/4] ${index === 1 ? 'bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-6' : ''}`}>
-                      <img
-                        src={step.img}
-                        alt={step.desc}
-                        className={`w-full h-full object-cover ${index === 1 ? 'w-auto h-auto max-h-[70%]' : ''}`}
-                      />
-                    </div>
-                    <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-lg p-2">
+                    <div className="px-3 pb-3">
                       <p className="text-xs font-bold text-gray-900 text-center">{step.desc}</p>
                     </div>
                   </div>
@@ -97,20 +85,20 @@ export default function ProductIntegration() {
                         {index === 0 ? (
                           <Plus className="w-8 h-8 text-orange-500" strokeWidth={3} />
                         ) : (
-                          <ArrowRight className="w-8 h-8 text-green-500" strokeWidth={3} />
+                          <ArrowRight className="w-8 h-8 text-orange-500" strokeWidth={3} />
                         )}
                       </div>
                       <div className="lg:hidden">
                         {index === 0 ? (
                           <Plus className="w-6 h-6 text-orange-500 rotate-90" strokeWidth={3} />
                         ) : (
-                          <ArrowRight className="w-6 h-6 text-green-500 rotate-90" strokeWidth={3} />
+                          <ArrowRight className="w-6 h-6 text-orange-500 rotate-90" strokeWidth={3} />
                         )}
                       </div>
                     </div>
                   </div>
                 )}
-              </>
+              </React.Fragment>
             ))}
           </div>
 
@@ -161,10 +149,8 @@ export default function ProductIntegration() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {videoExamples.map((example, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-br from-blue-300 to-cyan-300 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity" />
-
-                <div className="relative bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 group-hover:shadow-2xl transition-all">
-                  <div className="px-2 pt-2 pb-1 bg-blue-50 text-center">
+                <div className="relative bg-white rounded-xl overflow-hidden shadow-lg border-2 border-orange-200 group-hover:shadow-xl transition-all">
+                  <div className="px-2 pt-2 pb-1 bg-orange-50 text-center border-b border-orange-100">
                     <p className="text-xs md:text-sm font-bold text-gray-900">{example.title}</p>
                   </div>
                   <div className="aspect-[9/16] relative overflow-hidden">
@@ -238,9 +224,7 @@ export default function ProductIntegration() {
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {otherProducts.map((product, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -inset-3 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-
-                <div className="relative bg-white rounded-xl overflow-hidden shadow-xl border border-gray-200 group-hover:shadow-2xl transition-all">
+                <div className="relative bg-white rounded-xl overflow-hidden shadow-xl border-2 border-orange-200 group-hover:shadow-2xl transition-all">
                   <div className="aspect-[4/3] relative">
                     <img
                       src={product.img}
@@ -250,7 +234,7 @@ export default function ProductIntegration() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                      <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 border border-orange-100">
                         <p className="text-lg font-bold text-gray-900 mb-1">{product.product}</p>
                         <p className="text-sm text-gray-600">{product.desc}</p>
                       </div>
