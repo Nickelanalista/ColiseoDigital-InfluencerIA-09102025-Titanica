@@ -24,7 +24,6 @@ function App() {
 
       <Hero />
       <Showcase />
-      <EbookContent />
       <PromptToImage />
       <OutfitCustomization />
       <AccessoryCustomization />
@@ -33,6 +32,7 @@ function App() {
       <ProductIntegration />
       <ValueProposition />
       <UseCases />
+      <EbookContent />
       <Testimonials />
       <Pricing />
       <FAQ />

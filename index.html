@@ -24,6 +24,21 @@
 
     <link rel="canonical" href="https://coliseodigital.cl" />
 
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '858727636835795');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
     <!-- Hotmart Checkout -->
     <link rel="stylesheet" type="text/css" href="https://static.hotmart.com/css/hotmart-fb.min.css">
     <script src="https://static.hotmart.com/checkout/widget.min.js"></script>
@@ -53,6 +68,12 @@
     </style>
   </head>
   <body>
+    <!-- Meta Pixel Code - NoScript -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=858727636835795&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code - NoScript -->
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
