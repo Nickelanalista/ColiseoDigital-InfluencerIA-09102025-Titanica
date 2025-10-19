@@ -20,11 +20,6 @@ const additionalVariations = [
   { img: '/ugc/james/james_botella_5.png', location: 'Lifestyle' },
 ];
 
-const otherProducts = [
-  { img: '/ugc/james/chaqueta_northface.png', product: 'The North Face', desc: 'Chaqueta outdoor' },
-  { img: '/ugc/james/zapatillas nike.png', product: 'Nike', desc: 'Calzado deportivo' },
-];
-
 export default function ProductIntegration() {
 
   return (
@@ -216,48 +211,7 @@ export default function ProductIntegration() {
           </div>
         </div>
 
-        <div>
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-            Otros productos integrados con James
-          </h3>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {otherProducts.map((product, index) => (
-              <div key={index} className="relative group">
-                <div className="relative bg-white rounded-xl overflow-hidden shadow-xl border-2 border-orange-200 group-hover:shadow-2xl transition-all">
-                  <div className="aspect-[4/3] relative">
-                    <img
-                      src={product.img}
-                      alt={`James con ${product.product}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                      <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 border border-orange-100">
-                        <p className="text-lg font-bold text-gray-900 mb-1">{product.product}</p>
-                        <p className="text-sm text-gray-600">{product.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8">
-            <div className="text-center max-w-3xl mx-auto">
-              <Package className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="text-xl font-bold text-gray-900 mb-3">
-                Cualquier producto, cualquier marca
-              </h4>
-              <p className="text-base text-gray-700 leading-relaxed">
-                No hay límites. Desde ropa deportiva hasta tecnología, accesorios, alimentos, bebidas o productos de belleza.
-                Tu influencer puede promocionar todo manteniendo naturalidad y profesionalismo en cada imagen y video.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

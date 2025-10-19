@@ -7,8 +7,6 @@ const features = [
   'Plantillas de talking head',
   'Workflows de try-on virtual',
   'Métricas clave y optimización',
-  'Checklist legal y buenas prácticas',
-  'Uso comercial incluido',
 ];
 
 const modules = [
