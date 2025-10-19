@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useClarity } from '../hooks/useClarity';
+import { useScrollTracking } from '../hooks/useScrollTracking';
 
 const faqs = [
   {
@@ -26,9 +28,20 @@ const faqs = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { trackEvent } = useClarity();
+  const sectionRef = useScrollTracking({ eventName: 'scroll_to_faq', threshold: 0.3 });
+
+  const handleToggle = (index: number) => {
+    const newIndex = openIndex === index ? null : index;
+    setOpenIndex(newIndex);
+    
+    if (newIndex !== null) {
+      trackEvent('faq_opened', { question: faqs[index].question.substring(0, 50) });
+    }
+  };
 
   return (
-    <section className="py-12 md:py-20 lg:py-24 px-4 bg-gray-50">
+    <section ref={sectionRef} className="py-12 md:py-20 lg:py-24 px-4 bg-gray-50">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <p className="text-xs md:text-sm font-semibold text-primary mb-2 md:mb-3">FAQ</p>
@@ -44,7 +57,7 @@ export default function FAQ() {
               className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-primary/30 transition-all"
             >
               <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() => handleToggle(index)}
                 className="w-full p-4 md:p-5 lg:p-6 flex items-center justify-between text-left gap-3 min-h-[44px]"
               >
                 <span className="text-sm md:text-base font-semibold text-gray-900">{faq.question}</span>

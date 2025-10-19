@@ -1,4 +1,5 @@
 import { Quote, Star, Sparkles } from 'lucide-react';
+import { useScrollTracking } from '../hooks/useScrollTracking';
 
 const testimonials = [
   {
@@ -38,8 +39,10 @@ const stats = [
 ];
 
 export default function Testimonials() {
+  const sectionRef = useScrollTracking({ eventName: 'scroll_to_testimonials', threshold: 0.3 });
+
   return (
-    <section className="py-12 md:py-20 lg:py-24 px-4 bg-gradient-to-br from-gray-50 via-blue-50/20 to-white">
+    <section ref={sectionRef} className="py-12 md:py-20 lg:py-24 px-4 bg-gradient-to-br from-gray-50 via-blue-50/20 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 rounded-full mb-4">

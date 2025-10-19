@@ -1,4 +1,5 @@
 import { CheckCircle, FileText } from 'lucide-react';
+import { useScrollTracking } from '../hooks/useScrollTracking';
 
 const features = [
   'Framework de identidad consistente',
@@ -24,8 +25,10 @@ const modules = [
 ];
 
 export default function EbookContent() {
+  const sectionRef = useScrollTracking({ eventName: 'scroll_to_ebook_content', threshold: 0.3 });
+
   return (
-    <section className="py-12 md:py-20 lg:py-24 px-4 bg-gray-50">
+    <section ref={sectionRef} className="py-12 md:py-20 lg:py-24 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <p className="text-xs md:text-sm font-semibold text-primary mb-2 md:mb-3">CONTENIDO</p>

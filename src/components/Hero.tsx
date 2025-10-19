@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
+import { useClarity } from '../hooks/useClarity';
 
 export default function Hero() {
+  const { trackEvent } = useClarity();
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 59,
@@ -65,6 +67,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
                 href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
+                onClick={() => trackEvent('cta_hero_click', { location: 'hero', price: '7.99' })}
                 className="hotmart-fb hotmart__button-checkout group px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-base"
               >
                 Comprar ahora · USD 7.99

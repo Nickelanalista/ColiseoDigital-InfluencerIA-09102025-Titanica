@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useClarity } from '../hooks/useClarity';
+import { useScrollTracking } from '../hooks/useScrollTracking';
 
 export default function Pricing() {
+  const { trackEvent } = useClarity();
+  const sectionRef = useScrollTracking({ eventName: 'scroll_to_pricing', threshold: 0.3 });
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 59,
@@ -26,7 +30,7 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section className="py-12 md:py-20 lg:py-24 px-4 bg-white">
+    <section ref={sectionRef} className="py-12 md:py-20 lg:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <p className="text-xs md:text-sm font-semibold text-primary mb-2 md:mb-3">OFERTA LIMITADA</p>
@@ -82,6 +86,7 @@ export default function Pricing() {
 
           <a
             href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
+            onClick={() => trackEvent('cta_pricing_click', { location: 'pricing', price: '7.99' })}
             className="hotmart-fb hotmart__button-checkout group w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-sm md:text-base"
           >
             Comprar ahora · USD 7.99
