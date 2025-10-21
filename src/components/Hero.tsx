@@ -54,7 +54,7 @@ export default function Hero() {
                 <div className="flex -space-x-3">
                   <img src="/ugc/kate/kate_fremte.jpg" alt="Kate" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
                   <img src="/ugc/dave/dave_ai.png" alt="Dave" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <img src="/ugc/james/james_previo_1.png" alt="James" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src="/ugc/james/james_city.jpg" alt="James" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
                   <img src="/ugc/kloe/kloe.png" alt="Kloe" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
                 </div>
                 <div>

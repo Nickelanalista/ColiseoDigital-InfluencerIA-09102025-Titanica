@@ -46,7 +46,7 @@ export default function Showcase() {
             <span className="text-sm font-semibold text-primary">NUESTRO TRABAJO</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight px-4">
-            Influencers IA Creados con Nuestra Guía
+            <span className="text-primary">Influencers IA</span> Creados con Nuestra Guía
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Estos son ejemplos reales de influencers virtuales creados siguiendo el método paso a paso del eBook

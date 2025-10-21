@@ -1,4 +1,5 @@
 import Hero from './components/Hero';
+import ContentComparison from './components/ContentComparison';
 import Showcase from './components/Showcase';
 import OutfitCustomization from './components/OutfitCustomization';
 import AccessoryCustomization from './components/AccessoryCustomization';
@@ -23,6 +24,7 @@ function App() {
       <FloatingCTA />
 
       <Hero />
+      <ContentComparison />
       <Showcase />
       <PromptToImage />
       <OutfitCustomization />
