@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { getR2Url } from '../config/r2';
 
 export default function StickyHeader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,7 +45,7 @@ export default function StickyHeader() {
         <div />
         <div className="justify-self-center">
           <img
-            src="/material/logo_coliseo.png"
+            src={getR2Url('material/logo_coliseo.png')}
             alt="ColiseoDigital"
             className="h-11 md:h-12 w-auto"
           />

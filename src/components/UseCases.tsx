@@ -1,4 +1,5 @@
-import { ShoppingBag, Dumbbell, MapPin, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 const influencers = [
   {
@@ -6,10 +7,10 @@ const influencers = [
     role: 'Fashion & Lifestyle',
     description: 'Perfecta para moda, accesorios, cosmética y lifestyle brands. Versatilidad total.',
     images: [
-      '/ugc/kate/modelo_formal_1.jpg',
-      '/ugc/kate/modelo_gafas.png',
-      '/ugc/kate/modelo_cafe.jpg',
-      '/ugc/kate/modelo_playa_1.jpg',
+      getR2Url('ugc/kate/modelo_formal_1.jpg'),
+      getR2Url('ugc/kate/modelo_gafas.png'),
+      getR2Url('ugc/kate/modelo_cafe.jpg'),
+      getR2Url('ugc/kate/modelo_playa_1.jpg'),
     ],
     gradient: 'from-pink-500 to-rose-500',
     tags: ['Moda', 'Accesorios', 'Belleza', 'Lifestyle'],
@@ -19,10 +20,10 @@ const influencers = [
     role: 'Fitness & Sports',
     description: 'Ideal para marcas deportivas, suplementos, equipamiento fitness y estilo de vida activo.',
     images: [
-      '/ugc/dave/dave_deporte_1.jpg',
-      '/ugc/dave/dave_nike.png',
-      '/ugc/dave/dave_deporte_3.jpg',
-      '/ugc/dave/dave_machine.png',
+      getR2Url('ugc/dave/dave_deporte_1.jpg'),
+      getR2Url('ugc/dave/dave_nike.png'),
+      getR2Url('ugc/dave/dave_deporte_3.jpg'),
+      getR2Url('ugc/dave/dave_machine.png'),
     ],
     gradient: 'from-blue-500 to-cyan-500',
     tags: ['Deportes', 'Fitness', 'Activewear', 'Wellness'],
@@ -32,10 +33,10 @@ const influencers = [
     role: 'Urban & Outdoor',
     description: 'Perfecto para productos outdoor, lifestyle urbano, cafeterías y marcas casuales.',
     images: [
-      '/ugc/james/james_city.jpg',
-      '/ugc/james/JAMES_BOTELLA_1.png',
-      '/ugc/james/james_cafe.jpg',
-      '/ugc/james/james_puente.jpg',
+      getR2Url('ugc/james/james_city.jpg'),
+      getR2Url('ugc/james/JAMES_BOTELLA_1.png'),
+      getR2Url('ugc/james/james_cafe.jpg'),
+      getR2Url('ugc/james/james_puente.jpg'),
     ],
     gradient: 'from-amber-500 to-orange-500',
     tags: ['Outdoor', 'Urban', 'Casual', 'Bebidas'],

@@ -1,23 +1,24 @@
 import React from 'react';
 import { Play, Plus, ArrowRight, Coffee, Package, CheckCircle, Sparkles } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 const videoExamples = [
-  { video: '/ugc/james/james_stanley_5.mp4', title: 'Presentación natural' },
-  { video: '/ugc/james/james_stanley_4.mp4', title: 'Enfoque en producto' },
-  { video: '/ugc/james/james_stanley_3.mp4', title: 'Contexto lifestyle' },
-  { video: '/ugc/james/james_stanley_1.mp4', title: 'Demostración de uso' },
+  { video: getR2Url('ugc/james/james_stanley_5.mp4'), title: 'Presentación natural' },
+  { video: getR2Url('ugc/james/james_stanley_4.mp4'), title: 'Enfoque en producto' },
+  { video: getR2Url('ugc/james/james_stanley_3.mp4'), title: 'Contexto lifestyle' },
+  { video: getR2Url('ugc/james/james_stanley_1.mp4'), title: 'Demostración de uso' },
 ];
 
 const transformationSteps = [
-  { img: '/ugc/james/james_cafe.jpg', label: 'Foto Original', desc: 'James con café' },
-  { img: '/ugc/james/stanley_vaso.png', label: 'Producto', desc: 'Botella Stanley' },
-  { img: '/ugc/james/james_botella_2.png', label: 'Integración', desc: 'Resultado final' },
+  { img: getR2Url('ugc/james/james_cafe.jpg'), label: 'Foto Original', desc: 'James con café' },
+  { img: getR2Url('ugc/james/stanley_vaso.png'), label: 'Producto', desc: 'Botella Stanley' },
+  { img: getR2Url('ugc/james/james_botella_2.png'), label: 'Integración', desc: 'Resultado final' },
 ];
 
 const additionalVariations = [
-  { img: '/ugc/james/james_botella_3.png', location: 'Ciudad' },
-  { img: '/ugc/james/james_botella_4.png', location: 'Exterior' },
-  { img: '/ugc/james/james_botella_5.png', location: 'Lifestyle' },
+  { img: getR2Url('ugc/james/james_botella_3.png'), location: 'Ciudad' },
+  { img: getR2Url('ugc/james/james_botella_4.png'), location: 'Exterior' },
+  { img: getR2Url('ugc/james/james_botella_5.png'), location: 'Lifestyle' },
 ];
 
 export default function ProductIntegration() {

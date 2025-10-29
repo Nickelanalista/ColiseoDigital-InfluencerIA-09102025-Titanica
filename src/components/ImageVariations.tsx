@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Shirt, MapPin, Package } from 'lucide-react';
 import { useState } from 'react';
+import { getR2Url } from '../config/r2';
 
 const variations = [
   {
@@ -7,7 +8,7 @@ const variations = [
     title: 'Cambio de Vestuario',
     description: 'Kate modelando ropa GAP - consistencia perfecta',
     icon: Shirt,
-    image: '/ugc/kate/kate_gap_2.jpg',
+    image: getR2Url('ugc/kate/kate_gap_2.jpg'),
     badge: 'Vestuario',
     color: 'from-purple-500 to-pink-500',
   },
@@ -16,7 +17,7 @@ const variations = [
     title: 'Nueva Ubicación',
     description: 'Mismo look, diferente ambiente y pose',
     icon: MapPin,
-    image: '/ugc/kate/kate_gap_3.jpg',
+    image: getR2Url('ugc/kate/kate_gap_3.jpg'),
     badge: 'Fondo',
     color: 'from-blue-500 to-cyan-500',
   },
@@ -25,7 +26,7 @@ const variations = [
     title: 'Modelando Producto',
     description: 'Integración natural con productos reales',
     icon: Package,
-    image: '/ugc/kate/kate_gap_4.jpg',
+    image: getR2Url('ugc/kate/kate_gap_4.jpg'),
     badge: 'Producto',
     color: 'from-orange-500 to-red-500',
   },
@@ -73,7 +74,7 @@ export default function ImageVariations() {
 
                 <div className="aspect-[3/4]">
                   <img
-                    src="/ugc/kate/kate_gap_1.png"
+                    src={getR2Url('ugc/kate/kate_gap_1.png')}
                     alt="Kate - Imagen base original"
                     className="w-full h-full object-cover"
                   />

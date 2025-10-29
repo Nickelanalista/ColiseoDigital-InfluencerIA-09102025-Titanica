@@ -1,4 +1,5 @@
 import { Sparkles, Video, Mic } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 const capabilities = [
   {
@@ -40,7 +41,7 @@ export default function ImageAnimation() {
               <div className="p-2 bg-white">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-orange-400">
                   <img
-                    src="/ugc/kate/modelo_anillo.png"
+                    src={getR2Url('ugc/kate/modelo_anillo.png')}
                     alt="Kate - Imagen estática"
                     className="w-full h-full object-cover"
                   />
@@ -59,7 +60,7 @@ export default function ImageAnimation() {
               <div className="p-2 bg-white">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-orange-400 bg-gray-50">
                   <video
-                    src="/ugc/kate/video_modelo_anillo.mp4"
+                    src={getR2Url('ugc/kate/video_modelo_anillo.mp4')}
                     className="w-full h-full object-cover"
                     autoPlay
                     loop

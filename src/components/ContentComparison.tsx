@@ -1,4 +1,5 @@
 import { X, Check, ArrowRight } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 export default function ContentComparison() {
   return (
@@ -40,7 +41,7 @@ export default function ContentComparison() {
               {/* Imagen del producto */}
               <div className="aspect-square relative">
                 <img
-                  src="/promo/stanley_vaso.png"
+                  src={getR2Url('promo/stanley_vaso.png')}
                   alt="Fotografía estática de producto"
                   className="w-full h-full object-contain p-4 md:p-8 bg-gray-50"
                 />
@@ -72,7 +73,7 @@ export default function ContentComparison() {
               {/* Video con autoplay */}
               <div className="aspect-square relative bg-gray-900">
                 <video
-                  src="/promo/james_vid_2.mp4"
+                  src={getR2Url('ugc/james/james_stanley_1.mp4')}
                   autoPlay
                   loop
                   muted

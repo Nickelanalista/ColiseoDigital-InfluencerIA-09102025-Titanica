@@ -1,5 +1,6 @@
 import { CheckCircle, FileText } from 'lucide-react';
 import { useScrollTracking } from '../hooks/useScrollTracking';
+import { getR2Url } from '../config/r2';
 
 const features = [
   'Framework de identidad consistente',
@@ -43,7 +44,7 @@ export default function EbookContent() {
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity" />
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/20">
               <img
-                src="/promo/mockup_ebook_influencer_5.png"
+                src={getR2Url('promo/mockup_ebook_influencer_5.png')}
                 alt="Mockup del eBook - Influencer IA"
                 className="w-full h-auto"
               />

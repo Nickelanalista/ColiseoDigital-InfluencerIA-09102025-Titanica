@@ -1,5 +1,6 @@
 import { Copy, Sparkles, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
+import { getR2Url } from '../config/r2';
 
 const promptExample = `Influencer profesional femenina, 25 años, textura de piel natural y realista, iluminación suave de estudio, fondo blanco minimalista, mirando a la cámara, sonrisa sutil y natural, outfit casual moderno, cabello largo castaño, maquillaje natural, fotografía de alta calidad, 8k, ultra detallado`;
 
@@ -105,7 +106,7 @@ export default function PromptToImage() {
             <div className="relative bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
               <div className="aspect-[3/4] relative group">
                 <img
-                  src="/ugc/kate/modelo_formal_01.jpg"
+                  src={getR2Url('ugc/kate/modelo_formal_01.jpg')}
                   alt="Kate - Influencer IA generada con prompt"
                   className="w-full h-full object-cover"
                 />

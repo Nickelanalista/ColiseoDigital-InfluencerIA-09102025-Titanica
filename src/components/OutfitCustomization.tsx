@@ -1,4 +1,5 @@
 import { Sparkles, ShoppingBag, Zap, TrendingUp } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 export default function OutfitCustomization() {
   return (
@@ -104,7 +105,7 @@ export default function OutfitCustomization() {
                     </div>
                     <div className="aspect-[4/5]">
                       <img
-                        src="/ugc/kate/modelo_1.png"
+                        src={getR2Url('ugc/kate/modelo_1.png')}
                         alt="Kate - Imagen base"
                         className="w-full h-full object-cover"
                       />
@@ -120,7 +121,7 @@ export default function OutfitCustomization() {
                     </div>
                     <div className="aspect-[4/5] overflow-hidden">
                       <img
-                        src="/ugc/kate/gap.webp"
+                        src={getR2Url('ugc/kate/gap.webp')}
                         alt="Kate - Con outfit Gap"
                         className="w-full h-full object-cover"
                       />

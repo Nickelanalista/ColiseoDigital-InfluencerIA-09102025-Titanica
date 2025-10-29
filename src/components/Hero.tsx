@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, CheckCircle } from 'lucide-react';
 import { useClarity } from '../hooks/useClarity';
+import { getR2Url } from '../config/r2';
 
 export default function Hero() {
   const { trackEvent } = useClarity();
@@ -52,10 +53,10 @@ export default function Hero() {
             <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-4 inline-block">
               <div className="flex items-center gap-3 mb-2">
                 <div className="flex -space-x-3">
-                  <img src="/ugc/kate/kate_fremte.jpg" alt="Kate" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <img src="/ugc/dave/dave_ai.png" alt="Dave" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <img src="/ugc/james/james_city.jpg" alt="James" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <img src="/ugc/kloe/kloe.png" alt="Kloe" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src={getR2Url('ugc/kate/kate_fremte.jpg')} alt="Kate" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src={getR2Url('ugc/dave/dave_ai.png')} alt="Dave" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src={getR2Url('ugc/james/james_city.jpg')} alt="James" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src={getR2Url('ugc/kloe/kloe.png')} alt="Kloe" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-900">Kate, Dave, James y Kloe</p>
@@ -91,7 +92,7 @@ export default function Hero() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
-                  src="/promo/Portada Book Influencer IA.jpg"
+                  src={getR2Url('promo/Portada Book Influencer IA.jpg')}
                   alt="Crea tu Influencer IA para tu Negocio"
                   className="w-full h-full object-cover"
                 />

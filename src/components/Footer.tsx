@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/material/logo_coliseo.png"
+                src={getR2Url('material/logo_coliseo.png')}
                 alt="ColiseoDigital"
                 className="h-12 w-auto"
               />
@@ -24,10 +25,10 @@ export default function Footer() {
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 mb-6">
               <div className="flex -space-x-3 mb-3">
-                <img src="/ugc/kate/kate_fremte.jpg" alt="Kate" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
-                <img src="/ugc/dave/dave_ai.png" alt="Dave" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
-                <img src="/ugc/james/james_previo_1.png" alt="James" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
-                <img src="/ugc/kloe/kloe.png" alt="Kloe" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
+                <img src={getR2Url('ugc/kate/kate_fremte.jpg')} alt="Kate" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
+                <img src={getR2Url('ugc/dave/dave_ai.png')} alt="Dave" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
+                <img src={getR2Url('ugc/james/james_previo_1.png')} alt="James" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
+                <img src={getR2Url('ugc/kloe/kloe.png')} alt="Kloe" className="w-12 h-12 rounded-full border-2 border-gray-800 object-cover" />
               </div>
               <p className="text-sm text-gray-300">
                 <span className="font-bold text-white">Kate, Dave, James y Kloe</span> - Creados 100% con las técnicas del eBook

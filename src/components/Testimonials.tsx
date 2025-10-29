@@ -1,33 +1,34 @@
 import { Quote, Star, Sparkles } from 'lucide-react';
 import { useScrollTracking } from '../hooks/useScrollTracking';
+import { getR2Url } from '../config/r2';
 
 const testimonials = [
   {
     quote: 'Reducí significativamente el gasto en sesiones fotográficas y ahora genero contenido ilimitado. El retorno de inversión ha sido excelente.',
     author: 'Francisca Contreras',
     company: 'Dueña de Estilo Urbano, Providencia',
-    image: '/people/mujer_2.jpg',
+    image: getR2Url('people/mujer_2.jpg'),
     rating: 5,
   },
   {
     quote: 'La guía es muy práctica y directa. En una semana ya tenía mi influencer promocionando mis productos.',
     author: 'Rodrigo Valenzuela',
     company: 'Fundador de Marea Shop, Viña del Mar',
-    image: '/people/hombre_2.jpg',
+    image: getR2Url('people/hombre_2.jpg'),
     rating: 5,
   },
   {
     quote: 'Excelente. Ahora genero contenido para Instagram todos los días sin depender de terceros.',
     author: 'Camila Rojas',
     company: 'Marketing en Belleza Natural, Santiago',
-    image: '/people/mujer_1.jpg',
+    image: getR2Url('people/mujer_1.jpg'),
     rating: 5,
   },
   {
     quote: 'El paso a paso es muy claro. Empecé desde cero y ahora mi influencer virtual me ayuda a vender más.',
     author: 'Matías Espinoza',
     company: 'Dueño de TechZone Store, Concepción',
-    image: '/people/hombre_3.jpg',
+    image: getR2Url('people/hombre_3.jpg'),
     rating: 5,
   },
 ];

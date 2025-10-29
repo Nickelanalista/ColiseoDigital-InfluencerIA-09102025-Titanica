@@ -1,27 +1,28 @@
 import { Sparkles } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 const showcaseItems = [
   {
     name: 'Kate',
-    image: '/ugc/kate/kate_gap_2.jpg',
+    image: getR2Url('ugc/kate/kate_gap_2.jpg'),
     description: 'Modelo de moda virtual',
     category: 'Fashion',
   },
   {
     name: 'Dave',
-    image: '/ugc/dave/dave_deporte_4.jpg',
+    image: getR2Url('ugc/dave/dave_deporte_4.jpg'),
     description: 'Influencer fitness',
     category: 'Sports',
   },
   {
     name: 'James',
-    image: '/ugc/james/james_botella_2.png',
+    image: getR2Url('ugc/james/james_botella_2.png'),
     description: 'Creador de contenido lifestyle',
     category: 'Lifestyle',
   },
   {
     name: 'Kloe',
-    image: '/ugc/kloe/kloe.png',
+    image: getR2Url('ugc/kloe/kloe.png'),
     description: 'Influencer lifestyle y moda',
     category: 'Fashion',
   },

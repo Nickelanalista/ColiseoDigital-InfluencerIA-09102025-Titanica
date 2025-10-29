@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { useClarity } from '../hooks/useClarity';
 import { useScrollTracking } from '../hooks/useScrollTracking';
+import { getR2Url } from '../config/r2';
 
 export default function Pricing() {
   const { trackEvent } = useClarity();
@@ -44,7 +45,7 @@ export default function Pricing() {
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/promo/mockup_ebook_influencer_3.png"
+                src={getR2Url('promo/mockup_ebook_influencer_3.png')}
                 alt="eBook Influencer IA - Vista previa"
                 className="w-full h-auto"
               />

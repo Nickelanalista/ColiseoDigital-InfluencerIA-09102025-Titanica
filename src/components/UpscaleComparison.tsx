@@ -1,5 +1,6 @@
 import { Sparkles, Zap, Eye, TrendingUp } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { getR2Url } from '../config/r2';
 
 export default function UpscaleComparison() {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -67,7 +68,7 @@ export default function UpscaleComparison() {
           >
             <div className="absolute inset-0">
               <img
-                src="/ugc/kate/kate_yoga_upscale.png"
+                src={getR2Url('ugc/kate/kate_yoga_upscale.png')}
                 alt="Kate - Después del Upscale"
                 className="w-full h-full object-cover"
                 draggable="false"
@@ -79,7 +80,7 @@ export default function UpscaleComparison() {
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <img
-                src="/ugc/kate/kate_yoga_low.jpg"
+                src={getR2Url('ugc/kate/kate_yoga_low.jpg')}
                 alt="Kate - Antes del Upscale"
                 className="w-full h-full object-cover"
                 draggable="false"

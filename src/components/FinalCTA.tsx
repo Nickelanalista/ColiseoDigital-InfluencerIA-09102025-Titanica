@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useClarity } from '../hooks/useClarity';
+import { getR2Url } from '../config/r2';
 
 export default function FinalCTA() {
   const { trackEvent } = useClarity();
@@ -12,7 +13,7 @@ export default function FinalCTA() {
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/30 to-purple-500/30 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity" />
             <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/20">
               <img
-                src="/promo/mockup_ebook_influencer_2.png"
+                src={getR2Url('promo/mockup_ebook_influencer_2.png')}
                 alt="Vista previa del eBook Influencer IA"
                 className="w-full h-auto"
               />

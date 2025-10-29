@@ -1,4 +1,5 @@
 import { Sparkles, Video, Mic, Zap, TrendingUp, ArrowRight } from 'lucide-react';
+import { getR2Url } from '../config/r2';
 
 const features = [
   {
@@ -115,7 +116,7 @@ export default function ImageToVideo() {
                     </div>
                     <div className="aspect-[4/5]">
                       <img
-                        src="/ugc/kate/modelo_anillo.png"
+                        src={getR2Url('ugc/kate/modelo_anillo.png')}
                         alt="Kate - Imagen estática"
                         className="w-full h-full object-cover"
                       />
@@ -131,7 +132,7 @@ export default function ImageToVideo() {
                     </div>
                     <div className="aspect-[4/5] overflow-hidden">
                       <video
-                        src="/ugc/kate/video_modelo_anillo.mp4"
+                        src={getR2Url('ugc/kate/video_modelo_anillo.mp4')}
                         className="w-full h-full object-cover"
                         autoPlay
                         loop
