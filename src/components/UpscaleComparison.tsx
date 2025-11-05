@@ -1,4 +1,4 @@
-import { Sparkles, Zap, Eye, TrendingUp } from 'lucide-react';
+import { Sparkles, Zap, Eye } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { getR2Url } from '../config/r2';
 
@@ -124,23 +124,6 @@ export default function UpscaleComparison() {
           </div>
 
           <div className="space-y-4 md:space-y-6 lg:space-y-8">
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-4 md:p-6">
-                <div className="text-gray-400 text-xs md:text-sm mb-1.5 md:mb-2">Resolución Antes</div>
-                <div className="text-white text-2xl md:text-3xl font-bold mb-1">512px</div>
-                <div className="text-gray-400 text-[10px] md:text-xs">Calidad básica</div>
-              </div>
-
-              <div className="bg-gradient-to-br from-primary to-blue-600 border border-white/10 rounded-lg md:rounded-xl p-4 md:p-6">
-                <div className="text-blue-100 text-xs md:text-sm mb-1.5 md:mb-2">Resolución Después</div>
-                <div className="text-white text-2xl md:text-3xl font-bold mb-1">2048px</div>
-                <div className="text-blue-100 text-[10px] md:text-xs flex items-center gap-1">
-                  <TrendingUp className="w-2.5 h-2.5 md:w-3 md:h-3" />
-                  4x mejor
-                </div>
-              </div>
-            </div>
-
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-5 md:p-6 lg:p-8">
               <h3 className="text-white font-semibold text-lg md:text-xl mb-4 md:mb-6 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-orange-400" />
@@ -188,23 +171,6 @@ export default function UpscaleComparison() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
-          {[
-            { label: 'Instagram Posts', value: '1080x1350' },
-            { label: 'Instagram Stories', value: '1080x1920' },
-            { label: 'Facebook Ads', value: '1200x628' },
-            { label: 'Web & Print', value: 'Alta resolución' },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-4 md:p-6 text-center hover:bg-white/10 transition-colors"
-            >
-              <div className="text-gray-400 text-[10px] md:text-xs mb-1.5 md:mb-2">{item.label}</div>
-              <div className="text-white text-xs md:text-sm font-semibold">{item.value}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

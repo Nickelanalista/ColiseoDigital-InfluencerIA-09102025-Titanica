@@ -61,7 +61,7 @@ export default function Pricing() {
           <div className="text-center mb-6 md:mb-8 pt-8">
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">eBook Completo</h3>
             <div className="flex items-baseline justify-center gap-2 md:gap-3 mb-4 md:mb-6">
-              <span className="text-4xl md:text-5xl font-bold text-primary">USD 7.99</span>
+              <span className="text-4xl md:text-5xl font-bold text-primary">USD 4.99</span>
             </div>
             <div className="inline-block bg-red-50 border border-red-200 rounded-lg px-3 md:px-4 py-1.5 md:py-2 mb-6 md:mb-8">
               <p className="text-xs md:text-sm text-red-700 font-medium">
@@ -87,10 +87,10 @@ export default function Pricing() {
 
           <a
             href="https://pay.hotmart.com/F102324144R?checkoutMode=2"
-            onClick={() => trackEvent('cta_pricing_click', { location: 'pricing', price: '7.99' })}
+            onClick={() => trackEvent('cta_pricing_click', { location: 'pricing', price: '4.99' })}
             className="hotmart-fb hotmart__button-checkout group w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 text-sm md:text-base"
           >
-            Comprar ahora · USD 7.99
+            Comprar ahora · USD 4.99
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
           </a>
 

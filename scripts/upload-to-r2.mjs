@@ -1,4 +1,4 @@
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
 import { readFileSync, readdirSync, statSync } from 'fs';
 import { join, relative } from 'path';
 import { lookup } from 'mime-types';
@@ -49,12 +49,50 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
   return arrayOfFiles;
 }
 
+// Función para verificar si el archivo existe en R2 y si está actualizado
+async function needsUpload(key, localFilePath) {
+  try {
+    const headCommand = new HeadObjectCommand({
+      Bucket: R2_BUCKET_NAME,
+      Key: key,
+    });
+
+    const headResult = await r2Client.send(headCommand);
+    const localStats = statSync(localFilePath);
+    const localSize = localStats.size;
+    const remoteSize = headResult.ContentLength;
+
+    // Si el tamaño es diferente, necesita actualizarse
+    if (localSize !== remoteSize) {
+      return true;
+    }
+
+    // Si tienen el mismo tamaño, asumimos que es el mismo archivo
+    return false;
+  } catch (error) {
+    // Si el archivo no existe en R2, necesita subirse
+    if (error.name === 'NotFound' || error.$metadata?.httpStatusCode === 404) {
+      return true;
+    }
+    // Otro error, mejor subir por seguridad
+    return true;
+  }
+}
+
 // Función para subir un archivo a R2
 async function uploadFile(filePath, publicDir) {
   const fileContent = readFileSync(filePath);
   const relativePath = relative(publicDir, filePath);
   const key = relativePath.replace(/\\/g, '/'); // Normalizar path para Windows
   const contentType = lookup(filePath) || 'application/octet-stream';
+
+  // Verificar si necesita subirse
+  const shouldUpload = await needsUpload(key, filePath);
+
+  if (!shouldUpload) {
+    console.log(`⏭️  Ya existe: ${key}`);
+    return { success: true, key, skipped: true };
+  }
 
   try {
     const command = new PutObjectCommand({
@@ -66,7 +104,7 @@ async function uploadFile(filePath, publicDir) {
 
     await r2Client.send(command);
     console.log(`✅ Subido: ${key}`);
-    return { success: true, key };
+    return { success: true, key, skipped: false };
   } catch (error) {
     console.error(`❌ Error subiendo ${key}:`, error.message);
     return { success: false, key, error: error.message };
@@ -84,6 +122,7 @@ async function main() {
   
   const results = {
     success: [],
+    skipped: [],
     failed: []
   };
 
@@ -91,7 +130,11 @@ async function main() {
   for (const filePath of allFiles) {
     const result = await uploadFile(filePath, publicDir);
     if (result.success) {
-      results.success.push(result.key);
+      if (result.skipped) {
+        results.skipped.push(result.key);
+      } else {
+        results.success.push(result.key);
+      }
     } else {
       results.failed.push(result);
     }
@@ -99,7 +142,8 @@ async function main() {
 
   // Resumen
   console.log('\n📊 Resumen de migración:');
-  console.log(`✅ Exitosos: ${results.success.length}`);
+  console.log(`✅ Subidos: ${results.success.length}`);
+  console.log(`⏭️  Omitidos (ya existen): ${results.skipped.length}`);
   console.log(`❌ Fallidos: ${results.failed.length}`);
   
   if (results.failed.length > 0) {

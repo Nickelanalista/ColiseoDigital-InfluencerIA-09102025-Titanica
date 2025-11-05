@@ -29,9 +29,10 @@ Hemos implementado tracking de eventos críticos para detectar cuellos de botell
 
 | Evento | Descripción | Metadata |
 |--------|-------------|----------|
-| `cta_hero_click` | Click en botón CTA del Hero | `location: hero`, `price: 7.99` |
-| `cta_pricing_click` | Click en botón CTA de Pricing | `location: pricing`, `price: 7.99` |
-| `cta_final_click` | Click en botones CTA finales | `location: final_top/final_bottom`, `price: 7.99` |
+| `cta_hero_click` | Click en botón CTA del Hero | `location: hero`, `price: 4.99` |
+| `cta_pricing_click` | Click en botón CTA de Pricing | `location: pricing`, `price: 4.99` |
+| `cta_final_click` | Click en botones CTA finales | `location: final_top/final_bottom`, `price: 4.99` |
+| `cta_intermediate_click` | Click en botones CTA intermedios | `location: intermediate_1/intermediate_2`, `price: 4.99` |
 | `scroll_to_pricing` | Usuario llega a sección de Precios | - |
 | `scroll_to_testimonials` | Usuario llega a Testimonios | - |
 | `scroll_to_faq` | Usuario llega a FAQ | - |

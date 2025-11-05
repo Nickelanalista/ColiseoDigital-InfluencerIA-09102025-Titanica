@@ -15,6 +15,12 @@ const showcaseItems = [
     category: 'Sports',
   },
   {
+    name: 'Cami',
+    image: getR2Url('ugc/cami/cami_tenista_1.png'),
+    description: 'Tenista profesional IA',
+    category: 'Sports',
+  },
+  {
     name: 'James',
     image: getR2Url('ugc/james/james_botella_2.png'),
     description: 'Creador de contenido lifestyle',
@@ -54,7 +60,7 @@ export default function Showcase() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-12 md:mb-16">
           {showcaseItems.map((item, index) => (
             <div
               key={index}

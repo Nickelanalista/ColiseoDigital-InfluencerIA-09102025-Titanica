@@ -1,6 +1,9 @@
 import Hero from './components/Hero';
 import ContentComparison from './components/ContentComparison';
 import Showcase from './components/Showcase';
+import KateVideoShowcase from './components/KateVideoShowcase';
+import CamiShowcase from './components/CamiShowcase';
+import ProcessIntro from './components/ProcessIntro';
 import OutfitCustomization from './components/OutfitCustomization';
 import AccessoryCustomization from './components/AccessoryCustomization';
 import ProductIntegration from './components/ProductIntegration';
@@ -16,6 +19,7 @@ import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
+import SimpleCTA from './components/SimpleCTA';
 
 function App() {
   return (
@@ -26,12 +30,16 @@ function App() {
       <Hero />
       <ContentComparison />
       <Showcase />
+      <CamiShowcase />
+      <ProcessIntro />
       <PromptToImage />
       <OutfitCustomization />
       <AccessoryCustomization />
       <UpscaleComparison />
       <ImageAnimation />
+      <SimpleCTA />
       <ProductIntegration />
+      <KateVideoShowcase />
       <ValueProposition />
       <UseCases />
       <EbookContent />

@@ -21,7 +21,7 @@ export default function ImageAnimation() {
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-gradient-to-r from-orange-100 to-pink-100 rounded-full mb-4">
             <Video className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-            <span className="text-xs md:text-sm font-semibold text-primary">PASO 4 - NUEVO</span>
+            <span className="text-xs md:text-sm font-semibold text-primary">PASO 5</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 tracking-tight px-4">
             Dale Vida a tu Imagen
